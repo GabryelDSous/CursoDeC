@@ -4,15 +4,14 @@
 void main(){
     setlocale(LC_ALL,"Portuguese");
 
-    char r;
-    char s;
-    printf("Digite só uma letra: ");
-    fflush(stdin);
-    r = getchar();
-    printf("Digite outra letra: ");
-    fflush(stdin);
-    s = getchar();
-    printf("Você digitou a letra \"%c\" e \"%c\"\n", r, s);
+    char nome[30];
+    char ender[40];
+    printf("Digite seu nome: ");
+    //fflush(stdin);
+    gets(nome);
+    printf("Digite seu endereço: ");
+    gets(ender);
+    printf("Você digitou \"%s\"\nQue mora em \"%s\"\n", nome, ender);
 
     system("pause");
 }
