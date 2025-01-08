@@ -68,5 +68,7 @@ void main(){
     printf("\n%-23s\t%c\t%.1f", nomeP2, sexoP2, notaP2);
 
     // Terceira pessoa
-    printf("\n%-23s\t%c\t%.1f", nomeP3, sexoP3, notaP3);
+    printf("\n%-23s\t%c\t%.1f\n", nomeP3, sexoP3, notaP3);
+
+    system("pause");
 }
