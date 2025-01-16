@@ -9,7 +9,7 @@ void main(){
     int numLido;
     scanf("%d", &numLido);
     int dobro = numLido * 2;
-    float terca = numLido / 3.0;
+    float terca = (float)numLido / 3;
     printf("Analisando o número %d, seu dobro é %d e sua terça parte é %.2f.\n\n", numLido, dobro, terca);
     system("pause");
 }
