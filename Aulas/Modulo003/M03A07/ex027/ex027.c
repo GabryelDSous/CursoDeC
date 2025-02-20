@@ -13,33 +13,46 @@ void main(){
     // Code
     printf("Primeiro número: ");
     fflush(stdin);
-    scanf("$d", &num1);
+    scanf("%d", &num1);
 
     printf("Segundo número: ");
     fflush(stdin);
-    scanf("$d", &num2);
+    scanf("%d", &num2);
 
     printf("Terceiro número: ");
     fflush(stdin);
-    scanf("$d", &num3);
+    scanf("%d", &num3);
 
     printf("\n------------------------------------\n");
 
     // If e Else
-    if(num1 > num2){
-        printf("MAIOR: %d", num1);
-        if(num2 > num3){
-            printf("INTERMEDIARIO: %d", num2);
-            printf("MENOR: %d", num3);
+    if(num1 > num2 && num1 > num3){ // num1 > all
+        printf("MAIOR: %d\n", num1);
+        if(num2 > num3){ // num2 > num3
+            printf("INTERMEDIÁRIO: %d\n", num2);
+            printf("MENOR: %d\n", num3);
         }
-
+        else{ // num3 > num2
+            printf("INTERMEDIÁRIO: %d\n", num3);
+            printf("MENOR: %d\n", num2);
+        }
+    } else if(num2 > num1 && num2 > num3){ // num1 > all
+        printf("MAIOR: %d\n", num2);
+        if(num1 > num3){ // num1 > num3
+            printf("INTERMEDIÁRIO: %d\n", num1);
+            printf("MENOR: %d\n", num3);
+        } else { // num3 > num1
+            printf("INTERMEDIÁRIO: %d\n", num3);
+            printf("MENOR: %d\n", num1);
+        }
+    } else if(num3 > num1 && num3 > num2){ // num3 > all
+        printf("MAIOR: %d\n", num3);
+        if(num1 > num2){
+            printf("INTERMEDIÁRIO: %d\n", num1);
+            printf("MENOR: %d\n", num2);
+        } else {
+            printf("INTERMEDIÁRIO: %d\n", num2);
+            printf("MENOR: %d\n", num1);
+        }
     }
-
-    printf("\n\n");
-    system("pause");
 }
-/*
-        printf("MAIOR: %d", num2);
-        printf("INTERMEDIARIO: %d", num1);
-        printf("MENOR: %d", num3);
-*/
